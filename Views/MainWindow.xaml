@@ -1,0 +1,84 @@
+﻿<Window x:Class="examenJanvier2023.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:examenJanvier2023"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <DataTemplate x:Key="listTemplate">
+            <StackPanel Margin="0 5 0 5">
+                <Label Content="{Binding ProductId}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="{Binding ProductName}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key = "productCountByCountry">
+            <StackPanel Orientation = "Horizontal" Margin = "0 5 0 5">
+                <Label Content = "{Binding Country}" />
+                <Label Content = "{Binding Count}" />
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <!-- Définition des Colonnes -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <!-- Pour les labels -->
+            <ColumnDefinition Width="*" />
+            <!-- Pour les TextBox -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Définition des Lignes -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Ligne pour la ComboBox -->
+            <RowDefinition Height="*" />
+            <!-- Ligne pour le contenu principal -->
+            <RowDefinition Height="Auto" />
+            <!-- Ligne pour le bouton -->
+        </Grid.RowDefinitions>
+
+        <!-- ComboBox en haut à gauche -->
+        <ComboBox Name="Products" 
+                  ItemsSource="{Binding ProductList}" 
+                  ItemTemplate="{StaticResource listTemplate}" 
+                  SelectedItem="{Binding SelectedProduct}" 
+                  HorizontalAlignment="Left" 
+                  Margin="10"
+                  Width="150" 
+                  Grid.Row="0" />
+
+        <!-- StackPanel pour les labels -->
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="10">
+            <Label Content="ProductID" Margin="5" />
+            <Label Content="ProductName" Margin="5" />
+            <Label Content="Catégorie" Margin="5" />
+            <Label Content="Fournisseur" Margin="5" />
+        </StackPanel>
+
+        <!-- StackPanel pour les TextBox -->
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="10">
+            <TextBlock Margin="5" Name="ProductId" Text="{Binding SelectedProduct.ProductId}" />
+            <TextBlock Margin="5" Name="ProductName" Text="{Binding SelectedProduct.ProductName}" />
+            <TextBlock Margin="5" Name="Category" Text="{Binding SelectedProduct.Category}" />
+            <TextBlock Margin="5" Name="ContactName" Text="{Binding SelectedProduct.ContactName}" />
+        </StackPanel>
+
+        <!-- Bouton en bas des labels -->
+        <Button Command="{Binding LostCommand}" 
+                Content="Abandonner le produit sélectionné" 
+                Width="200" 
+                Margin="10" 
+                Grid.Row="2" 
+                Grid.ColumnSpan="2" 
+                HorizontalAlignment="Center" />
+
+        <ListBox Grid.Column = "1" 
+                 Name = "productCountByCountry" 
+                 ItemsSource = "{Binding ProductCountByCountry}" 
+                 ItemTemplate = "{StaticResource productCountByCountry}" />
+    </Grid>
+</Window>
