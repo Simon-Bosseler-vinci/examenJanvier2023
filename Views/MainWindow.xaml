@@ -28,17 +28,19 @@
             <ColumnDefinition Width="Auto" />
             <!-- Pour les labels -->
             <ColumnDefinition Width="*" />
-            <!-- Pour les TextBox -->
+            <!-- Pour les TextBlock -->
         </Grid.ColumnDefinitions>
 
         <!-- Définition des Lignes -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <!-- Ligne pour la ComboBox -->
-            <RowDefinition Height="*" />
-            <!-- Ligne pour le contenu principal -->
             <RowDefinition Height="Auto" />
+            <!-- Ligne pour le contenu principal (TextBlock) -->
+            <RowDefinition Height="*" />
             <!-- Ligne pour le bouton -->
+            <RowDefinition Height="Auto" />
+            <!-- Nouvelle ligne pour le formulaire d'ajout -->
         </Grid.RowDefinitions>
 
         <!-- ComboBox en haut à gauche -->
@@ -51,24 +53,20 @@
                   Width="150" 
                   Grid.Row="0" />
 
-        <!-- StackPanel pour les labels -->
-        <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="10">
-            <Label Content="ProductID" Margin="5" />
-            <Label Content="ProductName" Margin="5" />
-            <Label Content="Catégorie" Margin="5" />
-            <Label Content="Fournisseur" Margin="5" />
-        </StackPanel>
-
-        <!-- StackPanel pour les TextBox -->
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="10">
-            <TextBlock Margin="5" Name="ProductId" Text="{Binding SelectedProduct.ProductId}" />
-            <TextBlock Margin="5" Name="ProductName" Text="{Binding SelectedProduct.ProductName}" />
-            <TextBlock Margin="5" Name="Category" Text="{Binding SelectedProduct.Category}" />
-            <TextBlock Margin="5" Name="ContactName" Text="{Binding SelectedProduct.ContactName}" />
+        <!-- StackPanel avec TextBlocks, en bas de la ComboBox -->
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Grid.Row="1">
+            <TextBlock Text="Product ID:" FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedProduct.ProductId}" />
+            <TextBlock Text="Product Name:" FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedProduct.ProductName}" />
+            <TextBlock Text="Category :" FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedProduct.Category}" />
+            <TextBlock Text="Fournisseur :" FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedProduct.ContactName}" />
         </StackPanel>
 
         <!-- Bouton en bas des labels -->
-        <Button Command="{Binding LostCommand}" 
+        <Button Command="{Binding LostProduct}" 
                 Content="Abandonner le produit sélectionné" 
                 Width="200" 
                 Margin="10" 
@@ -76,9 +74,28 @@
                 Grid.ColumnSpan="2" 
                 HorizontalAlignment="Center" />
 
-        <ListBox Grid.Column = "1" 
-                 Name = "productCountByCountry" 
-                 ItemsSource = "{Binding ProductCountByCountry}" 
-                 ItemTemplate = "{StaticResource productCountByCountry}" />
+        <ListBox Grid.Column="1" 
+                 Name="productCountByCountry" 
+                 ItemsSource="{Binding ProductCountByCountry}" 
+                 ItemTemplate="{StaticResource productCountByCountry}" />
+
+        <!-- Formulaire pour ajouter un nouveau produit -->
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10">
+            <Label Content="Ajouter un produit" FontWeight="Bold" Margin="0,10,0,5" />
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label Content="Nom : " Width="100" />
+                <TextBox Width="200" Text="{Binding NewProductName, UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label Content="Catégorie : " Width="100" />
+                <TextBox Width="200" Text="{Binding NewProductCategory, UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label Content="Fournisseur : " Width="100" />
+                <TextBox Width="200" Text="{Binding NewProductSupplier, UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+            <Button Content="Ajouter le produit" Command="{Binding AddProduct}" Width="150" Margin="0,10,0,0" HorizontalAlignment="Left" />
+        </StackPanel>
+
     </Grid>
 </Window>

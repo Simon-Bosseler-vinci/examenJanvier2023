@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|c:\\users\\home\\source\\repos\\examenjanvier2023\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|c:\\users\\home\\source\\repos\\examenjanvier2023\\viewmodels\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|solutionrelative:viewmodels\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|c:\\users\\home\\source\\repos\\examenjanvier2023\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|c:\\users\\home\\source\\repos\\examenjanvier2023\\viewmodels\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|solutionrelative:viewmodels\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|c:\\users\\home\\source\\repos\\examenjanvier2023\\viewmodels\\productcountbycountry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|solutionrelative:viewmodels\\productcountbycountry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|c:\\users\\home\\source\\repos\\examenjanvier2023\\viewmodels\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|solutionrelative:viewmodels\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|c:\\users\\home\\source\\repos\\examenjanvier2023\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C67A5AB-D7C2-464D-BDBB-6F0E918DE4C3}|examenJanvier2023.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,46 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductCountByCountry.cs",
-              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductCountByCountry.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ProductCountByCountry.cs",
-              "ToolTip": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductCountByCountry.cs",
-              "RelativeToolTip": "ViewModels\\ProductCountByCountry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T20:35:08.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductModel.cs",
-              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ProductModel.cs",
-              "ToolTip": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductModel.cs",
-              "RelativeToolTip": "ViewModels\\ProductModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T08:43:47.163Z",
+              "WhenOpened": "2025-01-09T16:53:12.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductVM.cs",
-              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductVM.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ProductVM.cs",
-              "ToolTip": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductVM.cs",
-              "RelativeToolTip": "ViewModels\\ProductVM.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAswGYAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T08:43:59.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
@@ -81,6 +59,45 @@
               "RelativeToolTip": "Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-30T08:29:46.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductVM.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProductVM.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductVM.cs",
+              "RelativeToolTip": "ViewModels\\ProductVM.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T08:43:59.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProductModel.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductModel.cs",
+              "RelativeToolTip": "ViewModels\\ProductModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T08:43:47.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductCountByCountry.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductCountByCountry.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProductCountByCountry.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\examenJanvier2023\\ViewModels\\ProductCountByCountry.cs",
+              "RelativeToolTip": "ViewModels\\ProductCountByCountry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T20:28:43.741Z",
               "EditorCaption": ""
             }
           ]

@@ -146,3 +146,4 @@ C:\Users\Home\source\repos\examenJanvier2023\obj\Debug\net8.0-windows\examenJanv
 C:\Users\Home\source\repos\examenJanvier2023\obj\Debug\net8.0-windows\ref\examenJanvier2023.dll
 C:\Users\Home\source\repos\examenJanvier2023\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 C:\Users\Home\source\repos\examenJanvier2023\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\Home\source\repos\examenJanvier2023\obj\Debug\net8.0-windows\examenJanvier2023.sourcelink.json

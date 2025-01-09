@@ -11,9 +11,9 @@ namespace examenJanvier2023.ViewModels
         private ObservableCollection<ProductModel>? _ProductsList;
         private readonly NorthwindContext northwindContext = new NorthwindContext();
         private ProductModel _selectedProduct;
-        private DelegateCommand _discountedCommand;
+        private DelegateCommand _discountedProduct;
+        private DelegateCommand _AddProduct;
         private List<ProductCountByCountry> _productCountByCountry;
-
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
@@ -54,19 +54,19 @@ namespace examenJanvier2023.ViewModels
             set { _selectedProduct = value; OnPropertyChanged("SelectedProduct"); }
         }
 
-        public DelegateCommand LostCommand
+        public DelegateCommand LostProduct
         {
             get
             {
-                if (_discountedCommand == null)
+                if (_discountedProduct == null)
                 {
-                    _discountedCommand = new DelegateCommand(MarkDiscountedCommand);
+                    _discountedProduct = new DelegateCommand(MarkDiscountedProduct);
                 }
-                return _discountedCommand;
+                return _discountedProduct;
             }
         }
 
-        private void MarkDiscountedCommand()
+        private void MarkDiscountedProduct()
         {
             if(SelectedProduct == null)
             {
@@ -83,6 +83,18 @@ namespace examenJanvier2023.ViewModels
                 OnPropertyChanged("ProductList");
 
                 MessageBox.Show("Le produit a bien été abandonné !");
+            }
+        }
+
+        public DelegateCommand AddProduct
+        {
+            get
+            {
+                if(_AddProduct == null)
+                {
+                    _AddProduct = new DelegateCommand(AddNewProduct);
+                }
+                return _AddProduct;
             }
         }
 
@@ -117,6 +129,93 @@ namespace examenJanvier2023.ViewModels
             }
 
             return productsCountByCountry;
+        }
+
+
+        // ----------------------------------------------------------------------------
+
+        private string _newProductName;
+        public string NewProductName
+        {
+            get => _newProductName;
+            set
+            {
+                _newProductName = value;
+                OnPropertyChanged(nameof(NewProductName));
+            }
+        }
+
+        private string _newProductCategory;
+        public string NewProductCategory
+        {
+            get => _newProductCategory;
+            set
+            {
+                _newProductCategory = value;
+                OnPropertyChanged(nameof(NewProductCategory));
+            }
+        }
+
+        private string _newProductSupplier;
+        public string NewProductSupplier
+        {
+            get => _newProductSupplier;
+            set
+            {
+                _newProductSupplier = value;
+                OnPropertyChanged(nameof(NewProductSupplier));
+            }
+        }
+
+        private void AddNewProduct()
+        {
+            if (string.IsNullOrWhiteSpace(NewProductName) ||
+                string.IsNullOrWhiteSpace(NewProductCategory) ||
+                string.IsNullOrWhiteSpace(NewProductSupplier))
+            {
+                MessageBox.Show("Veuillez remplir tous les champs.");
+                return;
+            }
+
+            // Récupérer ou créer la catégorie
+            var category = northwindContext.Categories
+                .FirstOrDefault(c => c.CategoryName == NewProductCategory);
+            if (category == null)
+            {
+                category = new Category { CategoryName = NewProductCategory };
+                northwindContext.Categories.Add(category);
+            }
+
+            // Récupérer ou créer le fournisseur
+            var supplier = northwindContext.Suppliers
+                .FirstOrDefault(s => s.CompanyName == NewProductSupplier);
+            if (supplier == null)
+            {
+                supplier = new Supplier { CompanyName = NewProductSupplier };
+                northwindContext.Suppliers.Add(supplier);
+            }
+
+            Product newProduct = new Product
+            {
+                ProductName = NewProductName,
+                Category = category,
+                Supplier = supplier,
+                Discontinued = false
+            };
+
+            northwindContext.Products.Add(newProduct);
+            northwindContext.SaveChanges();
+
+            ProductModel newProductModel = new ProductModel(newProduct);
+            ProductList.Add(newProductModel);
+
+            // Réinitialiser les champs du formulaire
+            NewProductName = string.Empty;
+            NewProductCategory = string.Empty;
+            NewProductSupplier = string.Empty;
+
+            OnPropertyChanged(nameof(ProductList));
+            MessageBox.Show("Produit ajouté avec succès !");
         }
     }
 }
